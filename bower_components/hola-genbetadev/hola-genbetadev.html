@@ -1,0 +1,35 @@
+<!-- Imports polymer -->
+<link rel="import" href="../polymer/polymer.html">
+
+<!-- Defines element markup -->
+<dom-module id="hola-genbetadev">
+    <template>
+      
+        <!-- Así mostramos las variables definidas {{}} -->
+        <h1>Hola <strong>{{nombre}}</strong> :)</h1> 
+        
+    </template>
+</dom-module>
+
+<!-- Registers custom element -->
+<script>
+Polymer({
+    is: 'hola-genbetadev',  //Registramos el nombre del componente
+    properties: {           //Propiedades del componente
+        nombre: {
+            type: String,   //Propiedad (o atributo) llamado 'nombre' de tipo String 
+            value: 'Mundo!' //y valor por defecto
+            
+        }
+    },
+    ready: function(){
+      console.log("Hola "+this.nombre);
+    }
+});
+</script>
+
+
+
+
+
+
